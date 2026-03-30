@@ -1,5 +1,7 @@
 package org.javalord.chapter1;
 
+import org.javalord.common.LoggerUtil;
+
 import java.util.logging.Logger;
 
 class ThreadCreation implements Runnable {
@@ -18,11 +20,12 @@ public class RunnableExample {
     private static final Logger logger = Logger.getLogger(RunnableExample.class.getName());
 
     static void main() {
+        LoggerUtil.setUpLogger();
+
         logger.info("Thread main");
 
         ThreadCreation obj = new ThreadCreation();
         Thread thread = new Thread(obj);
         thread.start();
     }
-
 }
