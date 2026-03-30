@@ -27,6 +27,4 @@ public class ConcurrencyUtil {
     static void main(String[] args) {
 
     }
-
-
 }
